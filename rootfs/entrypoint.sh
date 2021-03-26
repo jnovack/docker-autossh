@@ -1,8 +1,14 @@
 #!/usr/bin/dumb-init /bin/sh
 source version.sh
-
+if [ -n "${SSH_KEY}" ]; then
+    echo "$SSH_KEY" > /id_rsa/custom_rsa
+    chmod 0600 /id_rsa/custom_rsa
+    KEY_FILE=/id_rsa/custom_rsa
+    SSH_KEY_FILE=/id_rsa/custom_rsa
+else
+    KEY_FILE=${SSH_KEY_FILE:=/id_rsa}
+fi
 # Set up key file
-KEY_FILE=${SSH_KEY_FILE:=/id_rsa}
 if [ ! -f "${KEY_FILE}" ]; then
     echo "[FATAL] No SSH Key file found"
     exit 1

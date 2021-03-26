@@ -80,6 +80,45 @@ services:
       - SSH_TARGET_PORT=22
       - SSH_TUNNEL_PORT=11111
       - SSH_KEY_FILE=/opt/id_rsa
+      - SSH_KEY= |-
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            R84vwTSGAckl81mQAAAAd0ZXN0aW5nAQI=
+            -----END OPENSSH PRIVATE KEY-----
       - SSH_KNOWN_HOSTS_FILE=/dev/null
       - SSH_STRICT_HOST_IP_CHECK=false
     networks:
@@ -103,6 +142,8 @@ services:
               while [ ! -f /opt/target.txt ]; do echo 'waiting for target...'; sleep 2; done;
               echo 'testing...'
               ssh -o StrictHostKeyChecking=no -i /opt/id_rsa root@203.0.113.10 -p 11111 -C 'if [ `hostname` == "target" ]; then echo '[INFO ] success'; exit 0; else echo '[PANIC] hostname is not target'; exit 1; fi';
+              echo 'testing SSH_KEY...'
+              ssh -o StrictHostKeyChecking=no -i /id_rsa/custom_rsa root@203.0.113.10 -p 11111 -C 'if [ `hostname` == "target" ]; then echo '[INFO ] success'; exit 0; else echo '[PANIC] hostname is not target'; exit 1; fi';
              )"
     networks:
       testnet:
